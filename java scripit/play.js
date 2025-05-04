@@ -29,4 +29,7 @@ person.greet();
 var abcd = ["anurag","tiwari"];
 // this is saprate oprator
 var newabcd = [...abcd];
+
+var secondabcd = [abcd.splice()];
 console.log(newabcd);
+console.log(secondabcd);
