@@ -24,3 +24,9 @@ const person = {
     }
 }
 person.greet();
+
+
+var abcd = ["anurag","tiwari"];
+// this is saprate oprator
+var newabcd = [...abcd];
+console.log(newabcd);
