@@ -4,7 +4,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node app.js"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,8 @@
     "url": "https://github.com/Anurags32/node-agin/issues"
   },
   "homepage": "https://github.com/Anurags32/node-agin#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "express": "^5.0.0"
+  }
 }
