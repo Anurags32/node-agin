@@ -1,0 +1,22 @@
+<!-- add-product.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Product</title>
+</head>
+<body>
+  <h1>Add New Product</h1>
+  <form action="/add-product" method="POST">
+    <label for="title">Product Title:</label><br>
+    <input type="text" id="title" name="title" required><br><br>
+
+    <label for="price">Price:</label><br>
+    <input type="number" id="price" name="price" step="0.01" required><br><br>
+
+    <button type="submit">Add Product</button>
+  </form>
+  <br>
+  <a href="/shop">Go to Shop</a>
+</body>
+</html>

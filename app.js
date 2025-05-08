@@ -1,32 +1,16 @@
 const http = require('http');
-
+const path = require('path');
+const route=require('./routes/product_routes');
+const shoperoutes=require('./routes/shope');
 const  express = require('express');
 
 const app = express();
-
-app.use('/',(req,res,next)=>{
-
-    console.log("express is first url");
-    next();
+app.use(express.urlencoded({extended:true}));
+app.use(shoperoutes);
+app.use(route);
+app.use((req,res,next)=>{
+  res.sendFile(path.join(__dirname, 'views', '404.html'));
+  // res.status(404).send('<h1>Page not found</h1>');
+  console.log("page not found");
 });
-app.use('/add-product',(req,res,next)=>{
-    res.send(`
-        <form action="/add-product" method="POST">
-          <input type="text" name="title" placeholder="Product Title">
-          <button type="submit">Add Product</button>
-        </form>
-      `);
-    console.log("express is second url");
-});
-
-// const server = http.createServer((req,res) => {
-// console.log(req);
-// process.exit();
-
-// });
-
-// const port= server.listen(3000);
-
-// console.log("this server runing this port"+port)
-
-app.listen(3000);
+app.listen(8000);
